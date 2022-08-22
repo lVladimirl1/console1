@@ -3,25 +3,20 @@
 Console.Clear();
 
 Console.WriteLine("Введите трёхзначное число");
-int namber = Convert.ToInt32(Console.ReadLine());
+int number = Convert.ToInt32(Console.ReadLine());
+string result = number.ToString();
+int i = 1;
 
-if (namber > 99 & namber < 1000) 
+void SecondDigitNumber()
 {
-    Console.Write ((namber / 10) % 10);
-    Console.Write ("-Вторая цифра данного числа");
-}
-
-if (namber < 100)
+if(number > 99 & number < 999)
 {
-    Console.WriteLine ("Это не трёхзначное число");
+    Console.Write(result[i]);
+    Console.Write("-Вторая цифра числа");
 }
-
-if (namber > 999)
- {
-     Console.WriteLine ("Это не трёхзначное число");
- }
-
-/// Получилось сделать только в простом, понятном для меня виде. Другие методы пока понять не получается.
-/// Много времени работаю в коммандировке в области, где большие проблеммы с интернетом.
-/// Можете подсказать доп. литературу которую можно будет скачать и изучать оффлайн.
-/// Большое спасибо.
+else
+{
+    Console.WriteLine("Это не трёхзначное число");
+}
+}
+SecondDigitNumber();
